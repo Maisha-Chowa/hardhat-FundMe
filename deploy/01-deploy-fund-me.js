@@ -1,17 +1,11 @@
-// function deployFunc() {
-//     console.log("Hi!!")
-// }
-
 const { network } = require("hardhat")
 const { networkConfig, developmentChains } = require("../helper-hardhat-config")
-
 const { verify } = require("../utils/verify")
 
 // module.exports.default = deployFunc
 
 module.exports = async (hre) => {
     const { getNamedAccounts, deployments } = hre
-
     const { deploy, log } = deployments
     const { deployer } = await getNamedAccounts()
 
